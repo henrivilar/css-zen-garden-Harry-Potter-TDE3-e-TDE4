@@ -19,10 +19,15 @@
     --font-sofia: 'Sofia Pro', sans-serif;
     --bg-color: #301934;
     --blue-color: #00001B;
+    --light-blue-color: #0B163B;
 }
 
 body {
+    height: 100vh;
     background-color: var(--bg-color);
+    /* background-image: url(../images/body-bg.jpg); */
+    background-size: cover;
+    background-repeat: repeat-y;
     font-family: var(--font-sofia);
 }
 
@@ -33,15 +38,22 @@ body h1, h2, h3, p, a, li, figcaption {
 
 .header {
     background-color: var(--blue-color);
-    background-image: url(../images/logo-harry-potter-gold.png);
-    background-size: 200px;
+    background-image: url(../images/stars.png);
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: top;
-    box-shadow: inset 0px -40px 30px 0px rgba(0,0,0,0.3);
+    background-position: center;
+    box-shadow: inset 0px -40px 30px 0px rgba(0,0,0,0.7);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.header__container {
+    background-image: url(../images/logo-harry-potter-gold.png);
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: top;
 }
 
 .header__title {
@@ -51,6 +63,7 @@ body h1, h2, h3, p, a, li, figcaption {
 }
 
 .header__subtitle {
+    font-family: var(--font-Wizard);
     text-align: center;
     padding-bottom: 10px;
     border-bottom: 1px solid gray;
@@ -59,26 +72,161 @@ body h1, h2, h3, p, a, li, figcaption {
 .header__menu {
     display: flex;
     justify-content: center;
-    padding: 10px 0;
+    padding: 20px 0;
     gap: 40px;
 }
 
-.menu__item {
-    border: 2px solid gray;
+.menu__item a, .intro__banner a {
+    background: linear-gradient(90deg, rgba(0,0,27,1) 0%, rgba(11,22,59,1) 100%);
+    border: 1px solid gray;
     border-radius: 20px;
-    padding: 5px 10px;
-    transition: .3s;
-}
-
-.menu__item:hover {
-    background-color: #fff;
-}
-
-.menu__item a {
+    padding: 2px 10px;
     text-decoration: none;
     transition: .3s;
 }
 
-.menu__item a:hover {
+.menu__item a:hover, .intro__banner a:hover {
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
+    box-shadow: 0 5px 15px rgba(218, 218, 218, 0.5);
+    padding: 4px 14px;
     color: var(--blue-color);
+}
+
+.section--intro{
+    background-image: url(../images/intro-bg.jpg);
+    height: 600px;
+    display: flex;
+    align-items: end;
+    justify-content: right;
+    
+}
+
+.intro__banner {
+    background-color: var(--blue-color);
+    text-align: center;
+    padding: 40px;
+    margin:100px 40px;
+    border-radius: 60px;
+    transition: .5s;
+    border: 1px solid gray;
+}
+
+.intro__banner:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 5px 15px #fff;
+}
+
+.intro__banner h2, p {
+    font-family: var(--font-Wizard);
+    margin-bottom: 5px;
+}
+
+.intro__banner h2 {
+    font-size: 2rem;
+}
+
+.intro__banner p {
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+    margin-bottom: 20px;
+}
+
+.intro__button {
+    margin: 0 15px;
+}
+
+.section--about {
+    height: 800px;
+    background-image: url(../images/body-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset 0px -50px 30px 0px rgba(0,0,0,0.9), inset 0px 50px 30px 0px rgba(0,0,0,0.9);
+}
+
+.section__content {
+    padding: 100px 40px;
+}
+
+.section--about .section__content h2, .section__content>p {
+    background: linear-gradient(90deg, rgba(0,0,27,1) 0%, rgba(11,22,59,1) 100%);
+    width: 600px;
+    padding: 0 60px;
+}
+
+.section--about .section__content h2 {
+    font-family: var(--font-Wizard);
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    border-radius: 60px 60px 0 0;
+}
+
+.section--about .section__content h2::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-image: url(../images/cartas.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 140px;
+    top: 880px;
+}
+
+.section--about .section__content>p {
+    text-align: center;
+    padding-bottom: 40px;
+    font-family: var(--font-sofia);
+    border-radius: 0 0 60px 60px;
+}
+
+.section--about .about__grid {
+    width: 600px;
+    background: linear-gradient(90deg, rgba(11,22,59,1) 0%, rgba(0,0,27,1) 100%);
+    padding: 40px;
+    margin-top: 40px;
+    margin-left: 1150px;
+    border-radius: 60px;
+    transition: .5s;
+}
+
+.section--about .about__grid:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 5px 15px #fff;
+}
+
+.section--about .about__grid::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 366px;
+    height: 366px;
+    background-image: url(../images/trio.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: -268px;
+    border-bottom-left-radius: 40px;
+}
+
+.section--about .about__item {
+    border-bottom: 1px solid gray;
+}
+
+.section--about .about__item:last-child {
+    border-bottom: none
+}
+
+.section--about .about__item h3 {
+    font-family: var(--font-Wizard);
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.section--about .about__item p {
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
 }
