@@ -30,11 +30,12 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     font-family: var(--font-sofia);
+    cursor: url(../images/oth263.png);
 }
 
-body:hover{
+/* body:hover{
     cursor: url(../images/oth263.cur), progress !important;
-}
+} */
 
 body h1, h2, h3, p, a, li, figcaption {
     color: #fff;
@@ -77,7 +78,7 @@ body h1, h2, h3, p, a, li, figcaption {
 .header__menu {
     display: flex;
     justify-content: center;
-    padding: 20px 0;
+    padding: 20px 0 30px 0;
     gap: 40px;
 }
 
@@ -96,7 +97,7 @@ body h1, h2, h3, p, a, li, figcaption {
     box-shadow: 0 5px 15px rgba(218, 218, 218, 0.5);
     padding: 4px 14px;
     color: var(--blue-color);
-    cursor: url(../images/oth263.cur), progress !important;
+    cursor: pointer;
 }
 
 .section--intro{
@@ -106,6 +107,7 @@ body h1, h2, h3, p, a, li, figcaption {
     align-items: flex-end;
     justify-content: flex-end;
     background-position: center;
+    box-shadow: inset 0px -50px 30px 0px rgba(0,0,0,1), inset 0px 50px 30px 0px rgba(0,0,0,0.9);
 }
 
 .intro__banner {
@@ -144,11 +146,10 @@ body h1, h2, h3, p, a, li, figcaption {
 
 .section--about {
     height: 800px;
-    /*background-image: url(../images/body-bg.jpg);*/
     background-size: cover;
     background-repeat: no-repeat;
-    /*background-color:rgba(0,0,27,0.7);*/
-    box-shadow: inset 0px -50px 30px 0px rgba(0,0,0,0.9), inset 0px 50px 30px 0px rgba(0,0,0,0.9);
+    box-shadow: inset 0px -50px 30px 0px rgba(0,0,0,1), inset 0px 50px 30px 0px rgba(0,0,0,1);
+    background-color:rgba(0,0,27,0.7);
 }
 
 .section__content {
@@ -251,22 +252,37 @@ body h1, h2, h3, p, a, li, figcaption {
     margin-left: 64em;
 }
 
-.section--gallery{
+.section--gallery {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 3vh;
     padding: 3vh;
-    background: linear-gradient(90deg, rgba(0,0,27,1) 0%, rgba(11,22,59,1) 100%);
-    height: 400px;
-    box-shadow:inset 0px -50px 30px 0px rgba(0,0,0,0.5), inset 0px 50px 30px 0px rgba(0,0,0,0.5);
- }
+    /* background: linear-gradient(90deg, rgba(0,0,27,1) 0%, rgba(11,22,59,1) 100%); */
+    background-color: var(--blue-color);
+    background-image: url(../images/stars.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 500px;
+    box-shadow:inset 0px -50px 30px 0px rgba(0,0,0,1), inset 0px 50px 30px 0px rgba(0,0,0,1);
+}
 
-.section--gallery h2{
+.section--gallery h2 {
     display: flex;
     justify-content: center;
     font-family: var(--font-Wizard);
     font-size: 2em;
+}
+
+.section--gallery .btn-more {
+    background: linear-gradient(90deg, rgba(0,0,27,1) 0%, rgba(11,22,59,1) 100%);
+    border: 1px solid gray;
+    border-radius: 20px;
+    padding: 8px 10px;
+    text-decoration: none;
+    transition: .3s;
+    color: #fff;
 }
 
 .gallery__grid {
@@ -275,7 +291,7 @@ body h1, h2, h3, p, a, li, figcaption {
     justify-content: space-around;
 }
 
-.gallery__item{
+.gallery__item {
     display: flex;
     flex-direction: column;
     gap: 2vh;
@@ -296,20 +312,22 @@ body h1, h2, h3, p, a, li, figcaption {
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
     box-shadow: 0 5px 15px rgba(218, 218, 218, 0.5);
     color: var(--blue-color);
-    cursor: url(../images/oth263.cur), progress !important;
+    scale: 1.05;
+    cursor: pointer;
 }
 
 .section--services{
+    height: 900px;
     background-color:rgba(0,0,27,0.7);
-    box-shadow:  inset 0px -50px 30px 0px rgba(0,0,0,0.5), inset 0px 50px 30px 0px rgba(0,0,0,0.5);
+    box-shadow:  inset 0px -50px 30px 0px rgba(0,0,0,1), inset 0px 50px 30px 0px rgba(0,0,0,01);
 }
 
 .section--services h2{
     display: flex;
     justify-content: center;
     font-family: var(--font-Wizard);
-    font-size: 2em;
-    font-weight: 800;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .services__list::before{
@@ -320,6 +338,7 @@ body h1, h2, h3, p, a, li, figcaption {
     background-size: cover;
     width: 600px;
     height: 600px;
+    top: 2488px;
 }
 
 .services__list{
@@ -338,7 +357,8 @@ body h1, h2, h3, p, a, li, figcaption {
     background-size: cover;
     width: 600px;
     height: 600px;
-    margin-left: 80em;
+    margin-left: 1270px;
+    top: 2488px;
 }
 
 .service__item{
@@ -351,11 +371,92 @@ body h1, h2, h3, p, a, li, figcaption {
     text-align: center;
     border-radius: 10px;
     background: linear-gradient(90deg, rgba(0,0,27,1) 0%, rgba(11,22,59,1) 100%);
+    transition: .3s;
+    border: 1px solid gray;
 }
 
 .service__item h3{
     font-family: var(--font-Wizard);
-    font-size: 1em;
-};
+    font-size: 1.5rem;
+}
 
+.service__item p {
+    font-family: var(--font-sofia);
+}
 
+.section--news {
+    height: 100%;
+    background-color:rgba(0,0,27,0.7);
+    box-shadow:  inset 0px -50px 30px 0px rgba(0,0,0,1), inset 0px 50px 30px 0px rgba(0,0,0,01);
+    padding: 80px 200px 20px 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.section--news .section__title {
+    font-family: var(--font-Wizard);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section--news .news__item {
+
+    margin-bottom: 30px;
+}
+
+.section--news .news__item:nth-child(even) {
+    display: flex;
+    justify-content: end;
+
+}
+
+.section--news .news__item:nth-child(odd) {
+    display: flex;
+    justify-content: start;
+}
+
+.section--news .news__item img {
+    border: 1px solid gray;
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+}
+
+.section--news .news__item .news__content {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue-color);
+    padding: 25px;
+    border: 1px solid gray;
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+}
+
+.section--news .news__item .news__content h3 {
+    font-family: var(--font-Wizard);
+    font-size: 1.5rem;
+}
+
+.section--news .news__item .news__content p {
+    font-family: var(--font-sofia);
+    text-align: center;
+}
+
+.section--news .news__item .news__content .news__date, .news__summary {
+    margin-bottom: 20px;
+}
+
+.section--news .news__item .news__content button {
+    padding: 8px 20px;
+}
+
+.section--news .news__item .news__content button:hover {
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 100%);
+    box-shadow: 0 5px 15px rgba(218, 218, 218, 0.5);
+    color: var(--blue-color);
+    scale: 1.05;
+    cursor: pointer;
+}
