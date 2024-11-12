@@ -1,0 +1,45 @@
+@media (min-width: 1200px) {
+    .section--intro {
+        background-position: right;
+    }
+
+    .intro__banner {
+        margin: 60px 40px;
+    }
+
+    .section--about{
+        height: 760px;
+    }
+
+    .section--about .about__grid {
+        margin-left: 580px;
+    }
+
+    .section--about .about__grid::before {
+        margin-left: -270px;
+    }
+
+    .section--gallery::before {
+        margin-left: 740px;
+    }
+
+    .section--services {
+        height: 830px;
+    }
+
+    .services__list::before {
+        width: 450px;
+        height: 450px;
+    }
+
+    .services__list::after {
+        width: 450px;
+        height: 450px;
+        margin-left: 880px;
+    }
+
+    .section--news {
+        height: 1020px;
+        padding: 60px;
+    }
+}
