@@ -657,7 +657,83 @@ body h1, h2, h3, p, a, li, figcaption {
 
 /* TABLET */
 @media (min-width: 768px) and (max-width: 1023px) {
+    .section--about .section__content h2, .section__content>p {
+        width: 400px;
+    }
 
+    .section--about .about__grid {
+        width: 450px;
+        margin-left: 220px;
+    }
+
+    .section--about .section__content h2::after {
+        margin-left: 60px;
+    }
+
+    .section--about .about__grid::before {
+        width: 300px;
+        height: 300px;
+        margin-left: -250px;
+        top: 1265px;
+    }
+
+    .section--gallery {
+        height: 780px;
+    }
+
+    .section--gallery::before {
+        margin-top: -700px;
+        margin-left: 500px;
+    }
+
+    .section--gallery button {
+        margin-bottom: 30px;
+    }
+
+    .section--news {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+
+    .section--news .news__item {
+        width: 800px;
+        height: 200px;
+    }
+
+    .section--news .news__item:nth-child(even) {
+        justify-content: center;
+    }
+
+    .section--news .news__item:nth-child(odd) {
+        justify-content: center;
+    }
+
+    .section--contact .contact__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section--contact .contact__form input, .section--contact .contact__form textarea {
+        padding-right: 200px;
+    }
+
+    .section--contact .contact__form button {
+        padding: 12px 100px;
+        margin-bottom: -30px;
+    }   
+
+    .footer__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer__content p::before {
+        display: none;
+    }
 }
 
 /* MOBILE */
