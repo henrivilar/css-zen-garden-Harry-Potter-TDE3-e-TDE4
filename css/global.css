@@ -20,6 +20,11 @@
     --bg-color: #301934;
     --blue-color: #00001B;
     --light-blue-color: #0B163B;
+    --dark-yellow: #946A2D;
+    --red: #A6332E;
+    --dark-red: #420503;
+    --green: #366447;
+    --dark-green: #234723;
 }
 
 body {
@@ -45,11 +50,11 @@ body h1, h2, h3, p, a, li, figcaption {
 
 .header {
     background-color: var(--blue-color);
-    background-image: url(../images/stars.png);
-    background-size: cover;
+    background-image: url(../images/stars.png), url(../images/horizons_bridge.png);
+    background-size: cover, cover;
     background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: inset 0px -40px 30px 0px rgba(0,0,0,0.7);
+    background-position: center, bottom;
+    /* box-shadow: inset 0px -40px 30px 0px rgba(0,0,0,0.7); */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,7 +113,7 @@ body h1, h2, h3, p, a, li, figcaption {
     align-items: flex-end;
     justify-content: flex-end;
     background-position: center;
-    box-shadow: inset 0px -50px 30px 0px rgba(0,0,0,1), inset 0px 50px 30px 0px rgba(0,0,0,0.9);
+    box-shadow: inset 0px -50px 30px 0px #0F0F11, inset 0px 50px 30px 0px #0F0F11;
 }
 
 .intro__banner {
@@ -147,9 +152,11 @@ body h1, h2, h3, p, a, li, figcaption {
 
 .section--about {
     height: 800px;
-    background-size: cover;
+    background-image: url(../images/horizons_burrow.png);
+    background-size: contain;
     background-repeat: no-repeat;
-    box-shadow: inset 0px -50px 30px 0px rgba(0,0,0,1), inset 0px 50px 30px 0px rgba(0,0,0,1);
+    background-position: bottom;
+    box-shadow: inset 0px 50px 30px 0px #0f0f11;
     background-color:rgba(0,0,27,0.7);
 }
 
@@ -264,14 +271,13 @@ body h1, h2, h3, p, a, li, figcaption {
     justify-content: center;
     gap: 3vh;
     padding: 3vh;
-    /* background: linear-gradient(90deg, rgba(0,0,27,1) 0%, rgba(11,22,59,1) 100%); */
-    background-color: var(--blue-color);
-    background-image: url(../images/stars.png);
+    background-color: #946A2D;
+    background-image: url(../images/stars.png), url(../images/horizons_hogwarts.png);
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+    background-size: contain, contain;
+    background-position: center, bottom;
     height: 500px;
-    box-shadow:inset 0px -50px 30px 0px rgba(0,0,0,1), inset 0px 50px 30px 0px rgba(0,0,0,1);
+    box-shadow: inset 0px 50px 30px 0px #15111C;
 }
 
 .section--gallery h2 {
@@ -323,9 +329,14 @@ body h1, h2, h3, p, a, li, figcaption {
 }
 
 .section--services{
+    position: relative;
     height: 900px;
     background-color:rgba(0,0,27,0.7);
-    box-shadow:  inset 0px -50px 30px 0px rgba(0,0,0,1), inset 0px 50px 30px 0px rgba(0,0,0,01);
+    background-image: url(../images/horizons_quidditch.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    box-shadow: inset 0px 50px 30px 0px #18150D;
 }
 
 .section--services h2{
@@ -344,7 +355,9 @@ body h1, h2, h3, p, a, li, figcaption {
     background-size: cover;
     width: 600px;
     height: 600px;
-    top: 2488px;
+    top: 300px;
+    margin-left: 120px;
+    z-index: -1;
 }
 
 .services__list{
@@ -363,8 +376,9 @@ body h1, h2, h3, p, a, li, figcaption {
     background-size: cover;
     width: 600px;
     height: 600px;
-    margin-left: 1270px;
-    top: 2488px;
+    margin-left: 1230px;
+    top: 300px;
+    z-index: -1;
 }
 
 .service__item{
@@ -396,9 +410,13 @@ body h1, h2, h3, p, a, li, figcaption {
 }
 
 .section--news {
-    height: 100%;
-    background-color:rgba(0,0,27,0.7);
-    box-shadow:  inset 0px -50px 30px 0px rgba(0,0,0,1), inset 0px 50px 30px 0px rgba(0,0,0,01);
+    height: 1100px;
+    background-color: var(--dark-red);
+    background-image: url(../images/stars.png), url(../images/horizons_village.png), url(../images/newspaper-background-harrypotter.png);
+    background-repeat: repeat-y, no-repeat, repeat;
+    background-position: center, bottom, center;
+    background-size: contain, contain, auto;
+    box-shadow: inset 0px 50px 30px 0px #0E0812;
     padding: 80px 200px 20px 200px;
     display: flex;
     flex-direction: column;
@@ -480,5 +498,110 @@ body h1, h2, h3, p, a, li, figcaption {
     box-shadow: 0 5px 15px rgba(218, 218, 218, 0.5);
     color: var(--blue-color);
     scale: 1.05;
+    cursor: pointer;
+}
+
+.section--contact {
+    background-color: var(--blue-color);
+    background-image: url(../images/stars.png), url(../images/horizons_bridge.png);
+    background-repeat: no-repeat;
+    background-position: center, bottom;
+    background-size: cover, contain;
+    box-shadow: inset 0px 50px 30px 0px #120B0E;
+}
+
+.section--contact .section__title {
+    font-family: var(--font-Wizard);
+    font-size: 2rem;
+    text-align: center;
+    margin-top: -40px;
+    margin-bottom: 40px;
+}
+
+.section--contact .contact__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.section--contact .contact__form label {
+    font-family: var(--font-Wizard);
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.section--contact .contact__form input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
+    padding: 4px;
+}
+
+.section--contact .contact__form textarea {
+    height: 16px;
+    width: 150px;
+    resize: none;
+    padding: 4px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.section--contact .contact__form button {
+    font-weight: 800;
+    padding: 8px 40px;
+    text-transform: uppercase;
+}
+
+.section--contact .contact__form button:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 5px 15px #fff;
+    cursor: pointer;
+}
+
+.footer {
+    height: 60px;
+    background-color: var(--dark-green);
+    background-image: url(../images/stars.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0px 50px 30px 0px #0F0F11;
+    padding: 60px 0 30px 0;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer__content p {
+    font-size: 1.1rem;
+}
+
+.footer__content p::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    background-image: url(../images/snake.png);
+    background-size: cover;
+    width: 110px;
+    height: 75px;
+    left: 290px;
+}
+
+.footer__content .footer__social {
+    display: flex;
+    gap: 50px;
+}
+
+.footer__content .footer__social a {
+    text-decoration: none;
+}
+
+.footer__content .footer__social a:hover {
+    text-decoration: underline;
     cursor: pointer;
 }
