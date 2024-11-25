@@ -816,6 +816,10 @@ body h1, h2, h3, p, a, li, figcaption {
         background-position: top, bottom;
     }
 
+    .section--gallery::before {
+        display: none;
+    }
+
     .section--gallery .btn-more {
         margin-bottom: 20px;
     }
